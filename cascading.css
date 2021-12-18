@@ -1,4 +1,3 @@
-
 /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
@@ -234,7 +233,15 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .th-border-dark-grey,.th-hover-border-dark-grey:hover,.th-border-dark-gray,.th-hover-border-dark-gray:hover{border-color:#616161!important}
 .th-border-pale-red,.th-hover-border-pale-red:hover{border-color:#ffe7e7!important}.th-border-pale-green,.th-hover-border-pale-green:hover{border-color:#e7ffe7!important}
 .th-border-pale-yellow,.th-hover-border-pale-yellow:hover{border-color:#ffffcc!important}.th-border-pale-blue,.th-hover-border-pale-blue:hover{border-color:#e7ffff!important}
-
+.page-footer {
+  position: relative;
+  display: block;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  background-color: #33374B;
+  color: #fff;
+}
+.th-gg{width:100%;height:1px;background-color: gray!important;}
 
 .btn {
     display: inline-block;
@@ -260,18 +267,3 @@ a {
 a {
     background-color: transparent;
 }
-
-
-
-
-
-
-.page-footer {
-  position: relative;
-  display: block;
-  padding-top: 80px;
-  padding-bottom: 20px;
-  background-color: #33374B;
-  color: #fff;
-}
-.th-gg{width:100%;height:1px;background-color: gray!important;}
