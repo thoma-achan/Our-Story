@@ -27,7 +27,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="th-bar-block th-white th-hide th-hide-large th-hide-medium th-large">
-   
+    <a href="#" class="th-bar-item th-button th-padding-large">Link 1</a>
+    <a href="#" class="th-bar-item th-button th-padding-large">Link 2</a>
+    <a href="#" class="th-bar-item th-button th-padding-large">Link 3</a>
+    <a href="#" class="th-bar-item th-button th-padding-large">Link 4</a>
   </div>
 </div>
 
@@ -40,7 +43,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
  <a href="#exp1" class="th-bar-item th-button th-padding-large">EXP1</a >|
  <a href="#exp2" class="th-bar-item th-button th-padding-large">EXP2 </a>|
 <a href="#exp3" class="th-bar-item th-button th-padding-large">EXP3</a>|
- 
+ <a href="#exp4" class="th-bar-item th-button th-padding-large">EXP4 </a>|
+<a href="#exp5" class="th-bar-item th-button th-padding-large">EXP5</a >|
+ <a href="#exp6" class="th-bar-item th-button th-padding-large">EXP6 </a>|
+<a href="#exp7" class="th-bar-item th-button th-padding-large">EXP7</a>|
+ <a href="#exp8" class="th-bar-item th-button th-padding-large">EXP8 </a>|
  </header>
 
 <!-- First Grid -->
@@ -83,7 +90,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 
-<!-- First Grid -->
+<!-- Second Grid -->
  <a name="exp2"><div class="th-row-padding th-light-grey th-padding-64 th-container">
   <div class="th-content">
     <div class="th-twothird">
@@ -135,7 +142,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
-<!-- First Grid -->
+<!-- Third Grid -->
  <a name="exp3"><div class="th-row-padding th-padding-64 th-container"></a>
   <div class="th-content">
     <div class="th-twothird">
@@ -183,6 +190,48 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
   </div>
 </div>
 
+<!-- Fourth Grid -->
+ <a name="exp2"><div class="th-row-padding th-light-grey th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 4</h1></a>
+      <h5 class="th-padding-32">Traffic Light</h5>
+
+      <p class="th-text-grey">Components Required<ul>
+<li>Arduino Uno</li>
+<li>Button switch*1</li>
+<li>Red M5 LED*1</li>
+<li>220ΩResistor*1</li>
+<li>10KΩ Resistor*1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire*6</li>
+<li>USB cable*1</li></ul></p>
+<br>
+
+<p class="th-text-grey">Code<br><font color="black" face=" sans-serif"><pre>
+	int ledpin=11;// initialize pin 11
+	int inpin=7;// initialize pin 7
+	int val;// define val
+	void setup()
+	{
+		pinMode(ledpin,OUTPUT);// set LED pin as “output”
+		pinMode(inpin,INPUT);// set button pin as “input”
+	}
+	void loop()
+	{
+		val=digitalRead(inpin);// read the level value of pin 7 and assign if to val
+		if(val==LOW)// check if the button is pressed, if yes, turn on the LED
+		{ digitalWrite(ledpin,LOW);}
+		else
+		{ digitalWrite(ledpin,HIGH);}
+	}
+</pre></font></p>
+</div>
+ <div class="th-third th-center">
+    <img src="images/WhatsApp Image 2021-12-19 at 12.46.28 PM.jpeg" height="600px" width="450px"/>
+    </div>
+  </div>
+</div>
 <!-- Footer -->
 <footer class="page-footer">  
   <div class="th-xlarge th-padding-32">
