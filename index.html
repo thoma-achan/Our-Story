@@ -58,7 +58,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h1>EXPERIMENT 1</h1></a>
       <h5 class="th-padding-32">Hello World LED Blinking</h5>
 
-      <p class="th-text-grey">Components Required<ul>
+      <p class="th-text-grey"><b>Components Required</b><ul>
 <li>Arduino Uno Board</li>
 <li>USB Cable</li>
 <li>LED (Any Color) x 1 Nos</li>
@@ -67,7 +67,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <li>Jumper Wires (Male to Male ) X 2 Nos</li></ul></p>
 <br>
 
-<p class="th-text-grey">Code<br><font color="black" face=" sans-serif"><pre>
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
 	int ledPin = 10; // define digital pin 10.
 	void setup()
 	{
@@ -97,7 +97,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h1>EXPERIMENT 2</h1></a>
       <h5 class="th-padding-32">Traffic Light</h5>
 
-      <p class="th-text-grey">Components Required<ul>
+      <p class="th-text-grey"><b>Components Required</b><ul>
 <li>Arduino board *1</li>
 <li>USB cable *1</li>
 <li>Red M5 LED*1</li>
@@ -108,7 +108,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <li>Breadboard jumper wires* several</li></ul></p>
 <br>
 
-<p class="th-text-grey">Code<br><font color="black" face=" sans-serif"><pre>
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
 	int redled =10; // initialize digital pin 8.
 	int yellowled =7; // initialize digital pin 7.
 	int greenled =4; // initialize digital pin 4.
@@ -149,7 +149,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
       <h1>EXPERIMENT 3</h1>
       <h5 class="th-padding-32">LED Chasing Effect</h5>
 
-      <p class="th-text-grey">Components Required<ul>
+      <p class="th-text-grey"><b>Components Required</b><ul>
 <li>Led *6</li>
 <li>Arduino board *1</li>
 <li>220Ω resistor *6</li>
@@ -158,7 +158,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <li>Breadboard wire *13</li></ul></p>
 <br>
 
-<p class="th-text-grey">Code<br><font color="black" face=" sans-serif"><pre>
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
 	int BASE = 2 ;  // the I/O pin for the first LED
 	int NUM = 6;   // number of LEDs
 	void setup()
@@ -191,13 +191,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
 
 <!-- Fourth Grid -->
- <a name="exp2"><div class="th-row-padding th-light-grey th-padding-64 th-container">
+ <a name="exp4"><div class="th-row-padding th-light-grey th-padding-64 th-container">
   <div class="th-content">
     <div class="th-twothird">
       <h1>EXPERIMENT 4</h1></a>
-      <h5 class="th-padding-32">Traffic Light</h5>
+      <h5 class="th-padding-32">Button Controlled LED</h5>
 
-      <p class="th-text-grey">Components Required<ul>
+      <p class="th-text-grey"><b>Components Required</b><ul>
 <li>Arduino Uno</li>
 <li>Button switch*1</li>
 <li>Red M5 LED*1</li>
@@ -208,7 +208,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 <li>USB cable*1</li></ul></p>
 <br>
 
-<p class="th-text-grey">Code<br><font color="black" face=" sans-serif"><pre>
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
 	int ledpin=11;// initialize pin 11
 	int inpin=7;// initialize pin 7
 	int val;// define val
@@ -232,6 +232,94 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
   </div>
 </div>
+
+<!-- Fifth Grid -->
+ <a name="exp5"><div class="th-row-padding th-padding-64 th-container"></a>
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 5</h1>
+      <h5 class="th-padding-32">Buzzer</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno</li>
+<li>Buzzer*1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire*2</li>
+<li>USB cable*1</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	int buzzer=8;// initialize digital IO pin that controls the buzzer
+	void setup() 
+	{ 
+		pinMode(buzzer,OUTPUT);// set pin mode as “output”
+	} 
+	void loop() 
+	{
+		digitalWrite(buzzer, HIGH); // produce sound
+	}</PRE></font>
+</p></div>
+    </div>
+<div class="th-third th-center">
+    <img src="images/WhatsApp Image 2021-12-19 at 3.22.03 PM.jpeg" height="600px" width="450px"/>
+    </div>
+  </div>
+</div>
+
+
+<!-- Sixth Grid -->
+ <a name="exp6"><div class="th-row-padding th-light-grey th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 6</h1></a>
+      <h5 class="th-padding-32">RGB LED</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno</li>
+<li>USB Cable * 1</li>
+<li>RGB LED * 1</li>
+<li>Resistor *3</li>
+<li>Breadboard jumper wire*5</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	int redpin = 11; //select the pin for the red LED
+	int bluepin =10; // select the pin for the blue LED
+	int greenpin =9;// select the pin for the green LED
+	int val;
+	void setup() {
+	  pinMode(redpin, OUTPUT);
+	  pinMode(bluepin, OUTPUT);
+	  pinMode(greenpin, OUTPUT);
+	  Serial.begin(9600);
+	}
+	void loop() 
+	{
+	   for(val=255; val>0; val--)
+	   {
+	      analogWrite(11, val);
+	      analogWrite(10, 255-val);
+	      analogWrite(9, 128-val);
+	      delay(1); 
+	  }
+	for(val=0; val<255; val++)
+	  {
+	      analogWrite(11, val);
+	      analogWrite(10, 255-val);
+ 	      analogWrite(9, 128-val);
+ 	      delay(1); 
+	  }
+	 Serial.println(val, DEC);
+	}
+</pre></font></p>
+</div>
+ <div class="th-third th-center">
+    <img src="images/WhatsApp Image 2021-12-19 at 3.22.02 PM.jpeg" height="600px" width="450px"/>
+    </div>
+  </div>
+</div>
+
+
 <!-- Footer -->
 <footer class="page-footer">  
   <div class="th-xlarge th-padding-32">
