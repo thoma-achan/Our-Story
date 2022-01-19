@@ -48,6 +48,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
  <a href="#exp6" class="th-bar-item th-button th-padding-large">EXP6 </a>|
 <a href="#exp7" class="th-bar-item th-button th-padding-large">EXP7</a>|
  <a href="#exp8" class="th-bar-item th-button th-padding-large">EXP8 </a>|
+
+<a href="#exp9" class="th-bar-item th-button th-padding-large">EXP9 </a>|
+<a href="#exp10" class="th-bar-item th-button th-padding-large">EXP10</a >|
+ <a href="#exp11" class="th-bar-item th-button th-padding-large">EXP11 </a>|
+<a href="#exp12" class="th-bar-item th-button th-padding-large">EXP12</a>|
  </header>
 
 <!-- First Grid -->
@@ -84,7 +89,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 
     <div class="th-third th-center">
-     <img src="images/IMG_20211216_160904.jpg" height="600px" width="450px"/>
+     <img src="images/IMG_20211216_160904.jpg" height="600px" width="450px"/><br>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/1.png" height="400px" width="450px"/>
+
     </div>
   </div>
 </div>
@@ -138,6 +146,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
  <div class="th-third th-center">
     <img src="images/IMG_20211216_161352.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/2.png" height="400px" width="450px"/>
+
     </div>
   </div>
 </div>
@@ -186,6 +197,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
     <div class="th-third th-center">
      <img src="images/IMG_20211216_161911.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/3.png" height="400px" width="450px"/>
+
     </div>
   </div>
 </div>
@@ -229,6 +243,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
  <div class="th-third th-center">
     <img src="images/WhatsApp Image 2021-12-19 at 12.46.28 PM.jpeg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/4.png" height="400px" width="450px"/>
+
     </div>
   </div>
 </div>
@@ -262,6 +279,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     </div>
 <div class="th-third th-center">
     <img src="images/WhatsApp Image 2021-12-19 at 3.22.03 PM.jpeg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/5.png" height="400px" width="450px"/>
+
     </div>
   </div>
 </div>
@@ -315,10 +335,547 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 </div>
  <div class="th-third th-center">
     <img src="images/WhatsApp Image 2021-12-19 at 3.22.02 PM.jpeg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/6.png" height="400px" width="450px"/>
+
     </div>
   </div>
 </div>
 
+
+<!-- Seventh Grid -->
+ <a name="exp7"><div class="th-row-padding th-padding-64 th-container"></a>
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 7</h1>
+      <h5 class="th-padding-32">LDR Light Sensor</h5>
+
+<p><b>LDR : Light Dependent Sensor</b><br><br>
+Photo Resistor (Photovaristor) is a resistor whose resistance varies from different incident light strength.<br>
+ It’s based on the photoelectric effect of semiconductor.<br> If the incident light is intense, its resistance reduces; if the incident light is weak, the resistance increases.</p>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno Board</li>
+<li>Photo Resistor*1</li>
+<li>Red M5 LED*1</li>
+<li>10KΩ Resistor*1</li>
+<li>220Ω Resistor*1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire*7</li>
+<li>USB cable*1</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	const int ledPin = 13;
+	const int ldrPin = A0;
+	void setup() {
+		Serial.begin(9600);
+		pinMode(ledPin, OUTPUT);
+		pinMode(ldrPin, INPUT);
+	}
+	void loop() {
+		int ldrStatus = analogRead(ldrPin);
+		if (ldrStatus <= 200) {
+		  digitalWrite(ledPin, HIGH);
+		  Serial.print("Its DARK, Turn on the LED : ");
+		  Serial.println(ldrStatus);
+		} else {
+		  digitalWrite(ledPin, LOW);
+		  Serial.print("Its BRIGHT, Turn off the LED : ");
+		  Serial.println(ldrStatus);
+		}
+	}</PRE></font>
+</p></div>
+    </div>
+<div class="th-third th-center">
+    <img src="images/IMG_20220117_215722.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/7.png" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Eighth Grid -->
+ <a name="exp8"><div class="th-row-padding th-light-grey th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 8</h1></a>
+      <h5 class="th-padding-32">Flame Sensor</h5>
+
+<p><b>Flame Sensor</b><br><br>
+<b>Usage:</b>These types of sensors are used for short range fire detection and can be used to monitor projects or as a safety precaution to cut devices off / on.<br><br>
+<b>Range:</b>I have found this unit is mostly accurate up to about 3 feet.<br><br>
+<b>How it works:</b>The flame sensor is very sensitive to IR wavelength at 760 nm ~ 1100 nm light.<br><br>
+<b>Analog output (A0): </b>Real-time output voltage signal on the thermal resistance.<br><br>
+<b>Digital output (D0):</b> When the temperature reaches a certain threshold, the output high and low signal threshold adjustable via potentiometer.<br><br>
+<br>
+<b>Pins:</b><br>
+<br>
+<b>VCC</b> - Positive voltage input: 5v for analog 3.3v for Digital.<br><br>
+
+<b>A0</b> - Analog output<br><br>
+
+<b>D0</b> - Digital output<br><br>
+
+<b>GND</b> - Ground<br><br></p>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino UNO</li>
+<li>Flame Sensor</li>
+<li>LED</li>
+<li>Buzzer</li>
+<li>BreadBoard</li>
+<li>Jumper</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	const int buzzerPin = 12;
+	const int flamePin = 11;
+	int Flame = HIGH;
+	int redled = 5;
+	int greenled = 6;
+	void setup() 
+	{
+   	    pinMode(buzzerPin, OUTPUT);
+	    pinMode(redled, OUTPUT);
+ 	    pinMode(greenled, OUTPUT);
+  	    pinMode(flamePin, INPUT);
+  	    Serial.begin(9600);
+	}
+	void loop() 
+	{
+	   Flame = digitalRead(flamePin);
+ 	   if (Flame== LOW)
+ 	   {
+	     digitalWrite(buzzerPin, HIGH);
+	     digitalWrite(redled, HIGH);
+	     digitalWrite(greenled, LOW);
+	  }
+	  else
+	  {
+	     digitalWrite(buzzerPin, LOW);
+	     digitalWrite(greenled, HIGH);
+	     digitalWrite(redled, LOW);
+	  }
+	}
+</pre></font></p>
+</div>
+ <div class="th-third th-center">
+    <img src="images/IMG_20220116_131412.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/8.png" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- Ninth Grid -->
+ <a name="exp9"><div class="th-row-padding th-padding-64 th-container"></a>
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 9</h1>
+      <h5 class="th-padding-32">LM35 Temperature Sensor</h5>
+
+<p><b>	LM35 Temperature Sensor</b><br><br>
+LM35 is a common and easy-to-use temperature sensor.<br>
+ LM35 is a widely used temperature sensor with many different package types.<br>
+ At room temperature, it can achieve the accuracy of ±1/4°C without additional calibration processing. <br>
+LM35 temperature sensor can produce different voltage by different temperature When temperature is 0 ℃, it outputs 0V; if increasing 1 ℃, the output voltage will increase 10 mv.
+</p>
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno  Board*1</li>
+<li>LM35*1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire*5</li>
+<li>USB cable*1</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	int potPin = 0; // initialize analog pin 0 for LM35 temperature sensor
+	void setup()
+	{
+		Serial.begin(9600);// set baud rate at”9600”
+	}
+	void loop()
+	{
+		int val;// define variable
+		int dat;// define variable
+		val=analogRead(0);// read the analog value of the sensor and assign it to val
+		dat=(125*val)>>8;// temperature calculation formula
+		Serial.print("Temperatuture");// output and display characters beginning with Tep
+		Serial.print(dat);// output and display value of dat
+		Serial.println("C");// display “C” characters
+		delay(2000);// wait for 2 second
+	}
+</PRE></font>
+</p></div>
+    </div>
+<div class="th-third th-center">
+    <img src="images/IMG_20220117_220242.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/9.png" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+
+<!-- Tenth Grid -->
+ <a name="exp10"><div class="th-row-padding th-light-grey th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 10</h1></a>
+      <h5 class="th-padding-32">IR Remote Control Using TSOP</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno Board*1</li>
+<li>Infrared Remote Controller(You can use TV Remote or any other remote) *1</li>
+<li>Infrared Receiver *1</li>
+<li>LED *6</li>
+<li>220ΩResistor *6</li>
+<li>Breadboard Wire</li>
+<li>USB cable*1</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	#include <IRremote.h>
+	int RECV_PIN = 11; // the pin where you connect the output pin of sensor
+	int led1 = 2;
+	int led2 = 3;
+	int led3 = 4;
+	int led4 = 5;
+	int led5 = 6;
+	int led6 = 7;
+	int itsONled[] = {0,0,0,0,0,0,0};
+		/* the initial state of LEDs is OFF (zero)
+		the first zero must remain zero but you can
+		change the others to 1's if you want a certain
+		led to light when the board is powered */
+	#define code1 16724175 // code received from button no. 1
+	#define code2 16718055 // code received from button no. 2
+	#define code3 16743045 // code received from button no. 3
+	#define code4 16716015
+	#define code4 16726215
+	#define code5 16734885
+	#define code6 16728765
+
+	IRrecv irrecv(RECV_PIN);
+
+	decode_results results;
+
+	void setup()
+	{
+		Serial.begin(9600); // you can ommit this line
+		irrecv.enableIRIn(); // Start the receiver
+		pinMode(led1, OUTPUT);
+		pinMode(led2, OUTPUT);
+		pinMode(led3, OUTPUT);
+		pinMode(led4, OUTPUT);
+		pinMode(led5, OUTPUT);
+		pinMode(led6, OUTPUT);
+	}
+
+	void loop() {
+		if (irrecv.decode(&results)) {
+	  	    unsigned int value = results.value;
+		    switch(value) {
+			case code1:
+			if(itsONled[1] == 1) { // if first led is on then
+			    digitalWrite(led1, LOW); // turn it off when button is pressed
+			     itsONled[1] = 0; // and set its state as off
+			}
+			else { // else if first led is off
+			    digitalWrite(led1, HIGH);// turn it on when the button is pressed
+			     itsONled[1] = 1; // and set its state as on
+ 			}
+			break;
+			case code2:
+			if(itsONled[2] == 1) {
+			    digitalWrite(led2, LOW);
+			     itsONled[2] = 0;
+			}
+			else {
+			    digitalWrite(led2, HIGH);
+			     itsONled[2] = 1;
+			}
+			break;
+			case code3:
+			if(itsONled[3] == 1) {
+			    digitalWrite(led3, LOW);
+			    itsONled[3] = 0;
+			}
+			else {
+			    digitalWrite(led3, HIGH);
+			    itsONled[3] = 1;
+			}
+			break;
+			case code4:
+			if(itsONled[4] == 1) {
+			    digitalWrite(led4, LOW);
+			    itsONled[4] = 0;
+			}
+			else {
+			    digitalWrite(led4, HIGH);
+			    itsONled[4] = 1;
+			}
+			break;
+			case code5:
+			if(itsONled[5] == 1) {
+			    digitalWrite(led5, LOW);
+			    itsONled[5] = 0;
+			}
+			else {
+			    digitalWrite(led5, HIGH);
+			    itsONled[5] = 1;
+			}
+			break;
+			case code6:
+			if(itsONled[6] == 1) {
+			    digitalWrite(led6, LOW);
+			    itsONled[6] = 0;
+			}
+			else {
+			    digitalWrite(led6, HIGH);
+			    itsONled[6] = 1;
+			}
+			break;
+			}
+			Serial.println(value); // you can ommit this line
+			irrecv.resume(); // Receive the next value
+			}
+		}
+</pre></font></p>
+</div>
+ <div class="th-third th-center">
+    <img src="images/IMG_20220117_223639.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/10.png" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+
+<!-- Eleventh Grid -->
+ <a name="exp11"><div class="th-row-padding th-padding-64 th-container"></a>
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 11</h1>
+      <h5 class="th-padding-32">Potentiometer analog Value Reading</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno Board*1</li>
+<li>10K Potentiometer *1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire*3</li>
+<li>USB cable*1</li></ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	int potpin=0;// initialize analog pin 0
+	int ledpin=13;// initialize digital pin 13
+	int val=0;// define val, assign initial value 0
+	void setup()
+	{
+ 	   pinMode(ledpin,OUTPUT);// set digital pin as “output”
+	   Serial.begin(9600);// set baud rate at 9600
+	}
+	void loop()
+	{
+	   digitalWrite(ledpin,HIGH);// turn on the LED on pin 13
+	   delay(50);// wait for 0.05 second
+	   digitalWrite(ledpin,LOW);// turn off the LED on pin 13
+	   delay(50);// wait for 0.05 second
+	   val=analogRead(potpin);// read the analog value of analog pin 0, and assign it to val 
+	   Serial.println(val);// display val’s value
+	}
+
+</PRE></font>
+</p></div>
+    </div>
+<div class="th-third th-center">
+    <img src="images/IMG_20220117_224700.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/11.png" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+
+
+<!--Twelveth Grid -->
+ <a name="exp12"><div class="th-row-padding th-light-grey th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>EXPERIMENT 12</h1></a>
+      <h5 class="th-padding-32">7 Segment Display</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno Board*1</li>
+<li>digit LED Segment Display*1</li>
+<li>220Ω Resistor*8</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wires *several</li>
+<li>USB cable*1</li>
+</ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	int a=7;// set digital pin 7 for segment a
+	int b=6;// set digital pin 6 for segment b
+	int c=5;// set digital pin 5 for segment c
+	int d=10;// set digital pin 10 for segment d
+	int e=11;// set digital pin 11 for segment e
+	int f=8;// set digital pin 8 for segment f
+	int g=9;// set digital pin 9 for segment g
+	int dp=4;// set digital pin 4 for segment dp
+	void digital_0(void) // display number 5
+	{
+	unsigned char j;
+	digitalWrite(a,HIGH);
+	digitalWrite(b,HIGH);
+	digitalWrite(c,HIGH);
+	digitalWrite(d,HIGH);
+	digitalWrite(e,HIGH);
+	digitalWrite(f,HIGH);
+	digitalWrite(g,LOW);
+	digitalWrite(dp,LOW);
+	}
+	void digital_1(void) // display number 1
+	{
+	unsigned char j;
+	digitalWrite(c,HIGH);// set level as “high” for pin 5, turn on segment c
+	digitalWrite(b,HIGH);// turn on segment b
+	for(j=7;j<=11;j++)// turn off other segments
+	digitalWrite(j,LOW);
+	digitalWrite(dp,LOW);// turn off segment dp
+	}
+	void digital_2(void) // display number 2
+	{
+	unsigned char j;
+	digitalWrite(b,HIGH);
+	digitalWrite(a,HIGH);
+	for(j=9;j<=11;j++)
+	digitalWrite(j,HIGH);
+	digitalWrite(dp,LOW);
+	digitalWrite(c,LOW);
+	digitalWrite(f,LOW);
+	}
+	void digital_3(void) // display number 3
+	{digitalWrite(g,HIGH);
+	digitalWrite(a,HIGH);
+	digitalWrite(b,HIGH);
+	digitalWrite(c,HIGH);
+	digitalWrite(d,HIGH);
+	digitalWrite(dp,LOW);
+	digitalWrite(f,LOW);
+	digitalWrite(e,LOW);
+	}
+	void digital_4(void) // display number 4
+	{digitalWrite(c,HIGH);
+	digitalWrite(b,HIGH);
+	digitalWrite(f,HIGH);
+	digitalWrite(g,HIGH);
+	digitalWrite(dp,LOW);
+	digitalWrite(a,LOW);
+	digitalWrite(e,LOW);
+	digitalWrite(d,LOW);
+	}
+	void digital_5(void) // display number 5
+	{
+	unsigned char j;
+	digitalWrite(a,HIGH);
+	digitalWrite(b, LOW);
+	digitalWrite(c,HIGH);
+	digitalWrite(d,HIGH);
+	digitalWrite(e, LOW);
+	digitalWrite(f,HIGH);
+	digitalWrite(g,HIGH);
+	digitalWrite(dp,LOW);
+	}
+	void digital_6(void) // display number 6
+	{
+	unsigned char j;
+	for(j=7;j<=11;j++)
+	digitalWrite(j,HIGH);
+	digitalWrite(c,HIGH);
+	digitalWrite(dp,LOW);
+	digitalWrite(b,LOW);
+	}
+	void digital_7(void) // display number 7
+	{
+	unsigned char j;
+	for(j=5;j<=7;j++)
+	digitalWrite(j,HIGH);
+	digitalWrite(dp,LOW);
+	for(j=8;j<=11;j++)
+	digitalWrite(j,LOW);
+	}
+	void digital_8(void) // display number 8
+	{
+	unsigned char j;
+	for(j=5;j<=11;j++)
+	digitalWrite(j,HIGH);
+	digitalWrite(dp,LOW);
+	}
+	void digital_9(void) // display number 5
+	{
+	unsigned char j;
+	digitalWrite(a,HIGH);
+	digitalWrite(b,HIGH);
+	digitalWrite(c,HIGH);
+	digitalWrite(d,HIGH);
+	digitalWrite(e, LOW);
+	digitalWrite(f,HIGH);
+	digitalWrite(g,HIGH);
+	digitalWrite(dp,LOW);
+	}
+	void setup()
+	{
+	int i;// set variable
+	for(i=4;i<=11;i++)
+	pinMode(i,OUTPUT);// set pin 4-11as “output”
+	}
+	void loop()
+	{
+	while(1)
+	{
+	digital_0();// display number 0
+	delay(1000);// wait for 1s
+	digital_1();// display number 1
+	delay(1000);// wait for 1s
+	digital_2();// display number 2
+	delay(1000); // wait for 1s
+	digital_3();// display number 3
+	delay(1000); // wait for 1s
+	digital_4();// display number 4
+	delay(1000); // wait for 1s
+	digital_5();// display number 5
+	delay(1000); // wait for 1s
+	digital_6();// display number 6
+	delay(1000); // wait for 1s
+	digital_7();// display number 7
+	delay(1000); // wait for 1s
+	digital_8();// display number 8
+	delay(1000); // wait for 1s
+	digital_9();// display number 9
+	delay(1000); // wait for 1s
+	}
+	}
+</pre></font></p>
+</div>
+ <div class="th-third th-center">
+    <img src="images/IMG_20220118_193201.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>CIRCUIT DIAGRAM</u></b></p>
+     <img src="diagram/12.png" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="page-footer">  
