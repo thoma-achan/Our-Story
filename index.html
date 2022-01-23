@@ -20,7 +20,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
     <a href="index.html" class="th-bar-item th-button th-padding-large th-white">Home</a>
     <a href="about.html" class="th-bar-item th-button th-hide-small th-padding-large th-hover-white">ABOUT ME</a>
     <a href="iotchallenge.html" class="th-bar-item th-button th-hide-small th-padding-large th-hover-white">IOT CHALLENGE</a>
-
+    
 <div class="th-gg">
 </div>
   </div>
@@ -48,11 +48,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
  <a href="#exp6" class="th-bar-item th-button th-padding-large">EXP6 </a>|
 <a href="#exp7" class="th-bar-item th-button th-padding-large">EXP7</a>|
  <a href="#exp8" class="th-bar-item th-button th-padding-large">EXP8 </a>|
-
 <a href="#exp9" class="th-bar-item th-button th-padding-large">EXP9 </a>|
 <a href="#exp10" class="th-bar-item th-button th-padding-large">EXP10</a >|
  <a href="#exp11" class="th-bar-item th-button th-padding-large">EXP11 </a>|
-<a href="#exp12" class="th-bar-item th-button th-padding-large">EXP12</a>|
+<a href="#exp12" class="th-bar-item th-button th-padding-large">EXP12</a>|<BR>
+<a href="#pro1" class="th-bar-item th-button th-padding-large">ASSIGNMENT1 </a>|
+<a href="#pro2" class="th-bar-item th-button th-padding-large">ASSIGNMENT2</a>|
+
  </header>
 
 <!-- First Grid -->
@@ -877,13 +879,190 @@ LM35 temperature sensor can produce different voltage by different temperature W
   </div>
 </div>
 
+
+<!-- PROJECT1 Grid -->
+
+ <a name="pro1"><div class="th-row-padding th-light-orange th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>ASSIGNMENT 1</h1></a>
+      <h5 class="th-padding-32">AUTOMATIC LIGHT LAMP</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno Board</li>
+<li>Photo Resistor*1</li>
+<li>Yellow M5 LED*1</li>
+<li>10KΩ Resistor*1</li>
+<li>220Ω Resistor*1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire</li>
+<li>USB cable*1</li>
+</ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	const int ledPin = 13;   //the number of the LED pin
+	const int ldrPin = A0;  //the number of the LDR pin
+	void setup() {
+	  Serial.begin(9600);
+	  pinMode(ledPin, OUTPUT);  //initialize the LED pin as an output
+	  pinMode(ldrPin, INPUT);   //initialize the LDR pin as an input
+	}
+	void loop() {
+	  int ldrStatus = analogRead(ldrPin);   //read the status of the LDR value
+	  //check if the LDR status is <= 300
+	  //if it is, the LED is HIGH
+	   if (ldrStatus <=300) {
+	    digitalWrite(ledPin, HIGH);               //turn LED on
+	    Serial.println("LDR is DARK, LED is ON");
+	   }
+	  else {
+	    digitalWrite(ledPin, LOW);          //turn LED off
+	    Serial.println("LDR is Bright, LED is OFF");
+	  }
+	}
+</pre></font></p>
+</div>
+
+ <div class="th-third th-center">
+    <img src="images/PRO1.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>OUTPUT</u></b></p>
+     <img src="images/PRO12.jpg" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+<br>
+
+<!-- PROJECT2 Grid -->
+
+ <a name="pro2"><div class="th-row-padding th-light-green th-padding-64 th-container">
+  <div class="th-content">
+    <div class="th-twothird">
+      <h1>ASSIGNMENT 2</h1></a>
+      <h5 class="th-padding-32">DIGITAL DICE</h5>
+
+      <p class="th-text-grey"><b>Components Required</b><ul>
+<li>Arduino Uno Board*1</li>
+<li>Breadboard*1</li>
+<li>Breadboard Jumper Wire</li>
+<li>USB cable*1</li>
+<li>LED*6</li>
+<li>Push Button*1</li>
+<li>1KΩ Resistor*1</li>
+<li>220Ω Resistor*6</li>
+</ul></p>
+<br>
+
+<p class="th-text-grey"><b>Code</b><br><font color="black" face=" sans-serif"><pre>
+	#define DEBUG 0
+	// 6 consecutive digital pins for the LEDs
+	int first = 2;
+	int second = 3;
+	int third = 4;
+	int fourth = 5;
+	int fifth = 6;
+	int sixth = 7;// pin for the button switch
+	int button = 12;// value to check state of button switch
+	int pressed = 0;
+	void setup() { // set all LED pins to OUTPUT
+	  for (int i=first; i<=sixth; i++) {
+	    pinMode(i, OUTPUT);
+	  }  // set buttin pin to INPUT
+	  pinMode(button, INPUT);  // initialize random seed by noise from analog pin 0 (should be unconnected)
+	  randomSeed(analogRead(0));// if we're debugging, connect to serial 
+	  #ifdef DEBUG
+	    Serial.begin(9600);
+	  #endif
+	}
+	void buildUpTension() {
+	  // light LEDs from left to right and back to build up tension
+	  // while waiting for the dice to be thrown
+	  // left to right
+	  for (int i=first; i<=sixth; i++) {
+	    if (i!=first) {
+	      digitalWrite(i-1, LOW);
+	    }
+	    digitalWrite(i, HIGH);
+	    delay(100);
+	  }
+	  // right to left
+	  for (int i=sixth; i>=first; i--) {
+	    if (i!=sixth) {
+	      digitalWrite(i+1, LOW);
+	    }
+	    digitalWrite(i, HIGH);
+	    delay(100);
+	  }
+	}
+
+	void showNumber(int number) {
+	  digitalWrite(first, HIGH);
+	  if (number >= 2) {
+	    digitalWrite(second, HIGH);
+	  }
+	  if (number >= 3) {
+	    digitalWrite(third, HIGH);    
+	  }
+	  if (number >= 4) {
+	    digitalWrite(fourth, HIGH);    
+	  }
+	  if (number >= 5) {
+	    digitalWrite(fifth, HIGH);    
+	  }
+	  if (number == 6) {
+	    digitalWrite(sixth, HIGH);    
+	  }
+	}
+	int throwDice() {
+	  // get a random number in the range [1,6]
+	  int randNumber = random(1,7);
+  
+	  #ifdef DEBUG
+	    Serial.println(randNumber);
+	  #endif
+	  
+	  return randNumber;
+	}
+	
+	void setAllLEDs(int value) {
+	  for (int i=first; i<=sixth; i++) {
+	    digitalWrite(i, value);
+	  }
+	}
+	void loop() {
+	  // if button is pressed - throw the dice
+	  pressed = digitalRead(button);
+
+	  if (pressed == HIGH) {
+	    // remove previous number
+	    setAllLEDs(LOW); 
+	    buildUpTension();
+	    int thrownNumber = throwDice();
+	    showNumber(thrownNumber);
+	  } 
+	}
+
+</pre></font></p>
+</div>
+ <div class="th-third th-center">
+    <img src="images/PRO2.jpg" height="600px" width="450px"/>
+<p align="left"><b><u>OUTPUT</u></b></p>
+     <img src="images/PRO22c.jpg" height="400px" width="450px"/>
+
+    </div>
+  </div>
+</div>
+
+
+
 <!-- Footer -->
 <footer class="page-footer">  
   <div class="th-xlarge th-padding-32">
- 
+<font size="1px"><center>CREATED ON BASIS OF KERALA IOT CHALLENGE</center></font>
+
  </div>
  </footer>
-
 
 </body>
 </html>
