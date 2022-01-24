@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="cascading.css">
+<script>
 
+</script>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 .th-bar,h1,button {font-family: "Montserrat", sans-serif}
@@ -12,6 +14,47 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
 
 </style>
 <body>
+<button class="back-to-top hidden">
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="back-to-top-icon"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      d="M7 11l5-5m0 0l5 5m-5-5v12"
+    />
+  </svg>
+</button>
+
+<script>
+const showOnPx = 100;
+const backToTopButton = document.querySelector(".back-to-top")
+
+const scrollContainer = () => {
+  return document.documentElement || document.body;
+};
+
+document.addEventListener("scroll", () => {
+  if (scrollContainer().scrollTop > showOnPx) {
+    backToTopButton.classList.remove("hidden")
+  } else {
+    backToTopButton.classList.add("hidden")
+  }
+})
+const goToTop = () => {
+  document.body.scrollIntoView({
+    behavior: "smooth",
+  });
+};
+backToTopButton.addEventListener("click", goToTop)
+
+</script>
+
 
 <!-- Navbar -->
 <div class="th-top">
