@@ -1,6 +1,5 @@
 
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
-
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}summary{display:list-item}
 audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
@@ -139,4 +138,25 @@ a {
 }
 a {
     background-color: transparent;
+}
+.back-to-top-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #7ac9f9;
+}
+.back-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  border-radius: 50%;
+  background: #141c38;
+  padding: 0.5rem;
+  border: none;
+  cursor: pointer;
+}
+.back-to-top:hover {
+  opacity: 60%;
+}
+.hidden {
+  display: none;
 }
