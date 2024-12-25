@@ -1639,6 +1639,61 @@
             message.style.color = 'red';
         }
     });
+document.getElementById('password-form').addEventListener('submit', async (event) => {
+    event.preventDefault();
+
+    const username = document.getElementById('name').value;
+    const currentTime = new Date().toISOString();
+    const data = ${username}, ${currentTime}\n;
+
+    // GitHub API information
+    const token = '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';
+    const repo = 'Our-Story';
+    const owner = 'thoma-achan';
+    const filePath = 'log.txt'; // Path to the file
+
+    try {
+        const response = await fetch(https://api.github.com/repos/${owner}/${repo}/contents/${filePath}, {
+            headers: {
+                Authorization: Bearer ${token},
+                'Content-Type': 'application/json',
+            },
+        });
+
+        let fileSha = '';
+        let fileContent = '';
+
+        if (response.ok) {
+            const fileData = await response.json();
+            fileSha = fileData.sha;
+            fileContent = atob(fileData.content) + data; // Decode and append new data
+        } else if (response.status === 404) {
+            fileContent = data; // If file doesn't exist, create it
+        } else {
+            throw new Error('Error fetching file from GitHub');
+        }
+
+        // Update or create file
+        const result = await fetch(https://api.github.com/repos/${owner}/${repo}/contents/${filePath}, {
+            method: 'PUT',
+            headers: {
+                Authorization: Bearer ${token},
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                message: 'Update data file',
+                content: btoa(fileContent), // Encode updated content
+                sha: fileSha,
+            }),
+        });
+
+        if (!result.ok) throw new Error('Error updating file on GitHub');
+       
+    } catch (error) {
+        console.error(error);
+        alert('Failed to save data.');
+    }
+});	
 </script>
 
 </body>
