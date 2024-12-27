@@ -28,23 +28,28 @@
         <link href="css/style.css" rel="stylesheet">
 
     <script>
-        function checkAuthentication() {
+       function checkAuthentication() {
             if (localStorage.getItem('authenticated') !== 'true') {
                 window.location.href = 'index.html';
             }
         }
 
-        function logout() {
+        function logoutOrRedirect() {
             localStorage.removeItem('authenticated');
             window.location.href = 'index.html';
         }
 
-        document.addEventListener('DOMContentLoaded', checkAuthentication);
+        document.addEventListener('DOMContentLoaded', () => {
+            checkAuthentication();
+
+            // Automatically log out or redirect after 5 seconds (for demo purposes, adjust as needed)
+            setTimeout(logoutOrRedirect, 5000);
+        });
     </script>
 </head>
 <body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome">
-    <div >
-        <!-- Carousel Start -->
+    <div>
+           <!-- Carousel Start -->
         <div class="container-fluid carousel-header px-0">
             <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
