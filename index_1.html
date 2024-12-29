@@ -36,12 +36,12 @@
         <div class="container-fluid carousel-header px-0">
             <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
                 <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                    <li data-bs-target="carousel-item1" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="carousel-item2" data-bs-slide-to="1"></li>
+                    <li data-bs-target="carousel-item3" data-bs-slide-to="2"></li>
                 </ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="carousel-item active">
+                    <div class="carousel-item" id="carousel-item1">
                         <img src="img/carousel-1.jpg" class="img-fluid" alt="Image">
                         <div class="carousel-caption">
                             <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px;">
@@ -55,7 +55,7 @@
                                                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="carousel-item2">
                         <img src="img/carousel-2.jpg" class="img-fluid" alt="Image">
                         <div class="carousel-caption">
                             <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px;">
@@ -69,7 +69,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-item">
+                    <div class="carousel-item" id="carousel-item3">
                         <img src="img/carousel-3.jpg" class="img-fluid bg-secondary" alt="Image">
                         <div class="carousel-caption">
                             <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px;">
